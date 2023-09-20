@@ -50,7 +50,6 @@ soma = reduce(lambda x, y: x + y, numeros)
 print(soma)  # Saída: 15
 
 """Lembre-se de que as funções lambda são mais adequadas para funções simples e curtas. Para funções mais complexas, é preferível usar a definição tradicional de função (`def`) para tornar o código mais legível e manutenível.
-
 `map()`, `filter()`, e `reduce()` são funções de ordem superior em Python que permitem operar em coleções de dados, como listas ou tuplas, de maneira eficiente e concisa. Aqui está uma explicação de cada uma delas:
 
 1. **`map()`**:
@@ -108,7 +107,6 @@ soma = reduce(lambda x, y: x + y, numeros)
 print(soma)  # Saída: 15
 
 """Essas funções são poderosas e podem simplificar o código ao evitar a necessidade de loops explícitos. Elas são especialmente úteis quando você deseja aplicar operações a todos ou a alguns elementos de uma coleção de dados.
-
 No entanto, lembre-se de que funções lambda ou predicados devem ser usados com parcimônia e clareza para manter o código legível. Para operações complexas, é preferível usar funções nomeadas com `def` para melhor documentação e compreensão do código.
 
 | Operator | Name | Example |
@@ -142,12 +140,21 @@ print(pares)
 
 """4 - Crie uma função lambda que converta uma string em maiúsculas."""
 
-alerta = 'Risco de Morte'
-maiúscula = str(map(lambda alerta.upper)
-print (maiúscula)
+maiusculas = lambda s: s.upper()
+print(maiusculas('caroline'))
 
 """5 - Crie uma função lambda que calcule o produto de três números."""
 
 lista = [4, 5, 6]
 produto = reduce(lambda x,y,: x * y, lista)
 print('lista =', lista,'\n\nproduto =', produto)
+
+#ou
+
+produto = lambda x, y, z: x * y * z
+print(produto(5, 3, 10))
+
+#ou
+
+produto = lambda x, y, z:print(x * y * z)
+produto(5, 3, 10)
